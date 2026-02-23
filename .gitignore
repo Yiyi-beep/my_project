@@ -1,0 +1,5 @@
+.venv/
+runs/
+archive_day3/
+__pycache__/
+*.pyc

@@ -1,0 +1,6 @@
+text,output,timestamp
+"额，hello？
+","收到输入：额，hello？
+
+当前设备：NVIDIA GeForce RTX 4060 Laptop GPU
+PyTorch：2.10.0+cu126 (12.6)",2026-02-20 14:39:29.255523
