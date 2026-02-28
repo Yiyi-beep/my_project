@@ -17,3 +17,5 @@ results_*/
 # local backups
 night_backup_*/
 artifacts_local/
+
+docs/
