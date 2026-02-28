@@ -1,0 +1,52 @@
+﻿Thu Feb 26 18:14:03 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.92                 Driver Version: 560.92         CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0  On |                  N/A |
+| N/A   35C    P8              3W /  125W |    1673MiB /   8188MiB |      5%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A      4292    C+G   C:\Program Files\Tencent\QQNT\QQ.exe        N/A      |
+|    0   N/A  N/A      5696    C+G   ...in\cef\cef.win64\steamwebhelper.exe      N/A      |
+|    0   N/A  N/A      7440    C+G   ...tionsPlus\logioptionsplus_agent.exe      N/A      |
+|    0   N/A  N/A      8044    C+G   ...ekyb3d8bbwe\PhoneExperienceHost.exe      N/A      |
+|    0   N/A  N/A      8924    C+G   ...m\radeonsoftware\RadeonSoftware.exe      N/A      |
+|    0   N/A  N/A     10220    C+G   C:\Windows\explorer.exe                     N/A      |
+|    0   N/A  N/A     10860    C+G   ...on\145.0.3800.70\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A     10976    C+G   ...cw5n1h2txyewy\CrossDeviceResume.exe      N/A      |
+|    0   N/A  N/A     11124    C+G   ...voice\logioptionsplus_logivoice.exe      N/A      |
+|    0   N/A  N/A     11720    C+G   C:\Windows\System32\NahimicSvc64.exe        N/A      |
+|    0   N/A  N/A     11940    C+G   ...2txyewy\StartMenuExperienceHost.exe      N/A      |
+|    0   N/A  N/A     12316    C+G   ...oogle\Chrome\Application\chrome.exe      N/A      |
+|    0   N/A  N/A     12604    C+G   ...nt.CBS_cw5n1h2txyewy\SearchHost.exe      N/A      |
+|    0   N/A  N/A     14980    C+G   ...5n1h2txyewy\ShellExperienceHost.exe      N/A      |
+|    0   N/A  N/A     15592    C+G   ...on\145.0.3800.70\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A     16284    C+G   ...t.LockApp_cw5n1h2txyewy\LockApp.exe      N/A      |
+|    0   N/A  N/A     18596    C+G   ...les\Microsoft OneDrive\OneDrive.exe      N/A      |
+|    0   N/A  N/A     19152    C+G   ...CBS_cw5n1h2txyewy\TextInputHost.exe      N/A      |
+|    0   N/A  N/A     20876    C+G   ...on\wallpaper_engine\wallpaper32.exe      N/A      |
+|    0   N/A  N/A     21812    C+G   ...BrowserEngine\BaiduNetdiskUnite.exe      N/A      |
+|    0   N/A  N/A     22536    C+G   C:\Windows\System32\ShellHost.exe           N/A      |
+|    0   N/A  N/A     23804    C+G   ...crosoft\Edge\Application\msedge.exe      N/A      |
+|    0   N/A  N/A     24700    C+G   ...oogle\Chrome\Application\chrome.exe      N/A      |
+|    0   N/A  N/A     25228    C+G   ...0_x64__8wekyb3d8bbwe\XboxPcTray.exe      N/A      |
+|    0   N/A  N/A     25236    C+G   ...nr4m\radeonsoftware\AMDRSSrcExt.exe      N/A      |
+|    0   N/A  N/A     25368    C+G   ..._x64__8wekyb3d8bbwe\XboxPcAppFT.exe      N/A      |
+|    0   N/A  N/A     25456    C+G   ...s\System32\ApplicationFrameHost.exe      N/A      |
+|    0   N/A  N/A     26092    C+G   ...__8wekyb3d8bbwe\WindowsTerminal.exe      N/A      |
+|    0   N/A  N/A     26828    C+G   C:\Windows\explorer.exe                     N/A      |
+|    0   N/A  N/A     27456    C+G   ...__8wekyb3d8bbwe\Notepad\Notepad.exe      N/A      |
+|    0   N/A  N/A     28176    C+G   C:\Windows\explorer.exe                     N/A      |
+|    0   N/A  N/A     29188    C+G   C:\Program Files\Tencent\QQNT\QQEX.exe      N/A      |
+|    0   N/A  N/A     29936    C+G   C:\Windows\System32\OpenWith.exe            N/A      |
++-----------------------------------------------------------------------------------------+

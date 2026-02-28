@@ -20,24 +20,13 @@ from typing import Dict
 
 import numpy as np
 
-try:
-    from tqdm import trange
-except ImportError:
-    trange = range
+from tqdm import trange
 
 # Allow running as a script (python grace_v2/train.py) by ensuring package import works.
 if __package__ in (None, ""):
     sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-import os
-
-cfg = os.environ.get("CONFIG", "baseline").lower()
-if cfg == "burst":
-    from grace_v2 import config_burst as config
-elif cfg in ("poisson", "poisson_like"):
-    from grace_v2 import config_poisson as config
-else:
-    from grace_v2 import config_baseline as config
+from grace_v2 import config
 from grace_v2.bandit import PairModeLinUCB
 from grace_v2.capnorm import load_cap_profile
 from grace_v2.logging_utils import append_jsonl

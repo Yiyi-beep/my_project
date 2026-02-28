@@ -1,0 +1,5 @@
+﻿python 3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]
+torch 2.10.0+cu126
+compiled cuda 12.6
+cuda available True
+gpu NVIDIA GeForce RTX 4060 Laptop GPU
