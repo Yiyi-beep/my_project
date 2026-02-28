@@ -1,0 +1,19 @@
+﻿# venv / cache
+.venv/
+__pycache__/
+*.pyc
+
+# training artifacts
+checkpoints_v2/*.pth
+checkpoints_v2/*.pkl
+checkpoints_v2/training_metrics*.csv
+
+# logs
+logs/*.jsonl
+
+# experiment outputs
+results_*/
+
+# local backups
+night_backup_*/
+artifacts_local/
