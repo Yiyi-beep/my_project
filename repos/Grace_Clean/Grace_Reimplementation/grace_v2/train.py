@@ -87,29 +87,40 @@ def main():
     )
 
     csv_path = ckpt_dir / "training_metrics_v2.csv"
-    with open(csv_path, "w", newline="") as f:
+    need_header = (not csv_path.exists()) or (csv_path.stat().st_size == 0)
+    with open(csv_path, "a", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(
-            [
-                "episode",
-                "stage",
-                "phase",
-                "mode",
-                "delivery_ratio",
-                "p95_latency_ms",
-                "ppo_loss",
-            ]
-        )
-
+        if need_header:
+            writer.writerow(
+                [
+                    "episode",
+                    "stage",
+                    "phase",
+                    "mode",
+                    "delivery_ratio",
+                    "p95_latency_ms",
+                    "ppo_loss",
+                    "seed",
+                    "run_id",
+                ]
+            )
     episode_idx = 0
     update_counter = 0
+
+    only_stage = os.environ.get("ONLY_STAGE", "").strip()
+
     for stage_name, mode_weights in config.CURRICULUM:
+        if only_stage and stage_name != only_stage:
+            continue
+
         phase = stage_phase(stage_name)
         episodes = config.STAGE_EPISODES.get(stage_name, 0)
         print(f"[Train] Stage {stage_name} ({phase}) for {episodes} episodes...")
+
         for i in trange(episodes, desc=f"{stage_name}", unit="ep"):
             mode = sample_mode(mode_weights)
             result = sim.run_episode(mode, phase, seed=episode_idx)
+
             with open(csv_path, "a", newline="") as f:
                 writer = csv.writer(f)
                 writer.writerow(
@@ -121,8 +132,11 @@ def main():
                         f"{result.delivery_ratio:.4f}",
                         f"{result.p95_latency_ms:.2f}" if result.p95_latency_ms else "",
                         f"{result.ppo_loss['loss']:.4f}" if isinstance(result.ppo_loss, dict) else "",
+                        base_seed,
+                        run_id,
                     ]
-                )
+                )	
+
             # episode-level JSONL log
             total_gen = result.overall_metrics.get("total_generated", 0)
             total_del = result.overall_metrics.get("total_delivered", 0)
